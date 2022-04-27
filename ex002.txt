@@ -1,0 +1,23 @@
+//  Faça um programa em que a pessoa insira sua altura e peso e calcule o IMC;
+//  O cálculo do IMC é feito dividindo o peso (em quilogramas) pela altura (em metros) ao quadrado.
+using System;
+
+namespace ex002
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float a1, b1;
+            double resultado;
+            Console.WriteLine("Digite o seu Peso em Kg: ");
+            a1 = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("Digite sua altura em metros: ");
+            b1 = Convert.ToSingle(Console.ReadLine());
+            resultado = (a1 / (b1 * b1));
+            Console.WriteLine("==========================");
+            Console.WriteLine(" Seu IMC é: " + resultado);
+        }
+    }
+
+}

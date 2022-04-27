@@ -1,0 +1,32 @@
+//  Faça um programa que receba o nome e a idade de uma pessoa e mostre uma mensagem se ela for maior de idade;
+
+using System;
+
+namespace ex001
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a1;
+            int b1;
+            bool resultadoInt;
+            Console.WriteLine("Digite o seu nome: ");
+            a1 = Console.ReadLine();
+            Console.WriteLine("Digite sua idade: ");
+            b1 = Convert.ToInt32(Console.ReadLine());
+            resultadoInt = b1 >= 18;
+            Console.WriteLine("==========================");
+            if (resultadoInt)
+            {
+                Console.WriteLine(" Maior de idade!");
+            }
+            else
+            {
+                Console.WriteLine("Menor de idade!");
+            }
+            
+        }
+    }
+
+}

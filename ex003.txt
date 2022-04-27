@@ -1,0 +1,54 @@
+//   Faça um programa que receba dois números,
+//   um texto com a operação que ela deseja efetuar e
+//   efetue essa operação, mostrando em tela o resultado e a operação;
+
+using System;
+
+namespace ex003
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double n1, n2, equacao;
+            string resposta;
+            Console.WriteLine("Digite o 1° número: ");
+            n1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Digite o 2° número: ");
+            n2 = Convert.ToDouble(Console.ReadLine().Trim());
+            Console.WriteLine("=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+            Console.WriteLine("Qual operação dejesa fazer? ");
+            Console.WriteLine("Adição");
+            Console.WriteLine("Subtração");
+            Console.WriteLine("Multiplicação");
+            Console.WriteLine("Divisão");
+            Console.WriteLine("==========================");
+            resposta = Console.ReadLine();
+            Console.WriteLine("==========================");
+            if (resposta == "Adição")
+            {
+                equacao = n1 + n2;
+                Console.WriteLine(String.Format("{0} + {1} = {2}", n1, n2, equacao));
+            }
+            else if (resposta == "Subtração")
+            {
+                equacao = n1 - n2;
+                Console.WriteLine(String.Format("{0} - {1} = {2}", n1, n2, equacao));
+            }
+            else if (resposta == "Multiplicação")
+            {
+                equacao = n1 * n2;
+                Console.WriteLine(String.Format("{0} * {1} = {2}", n1, n2, equacao));
+            }
+            else if (resposta == "Divisão")
+            {
+                equacao = n1 / n2;
+                Console.WriteLine(String.Format("{0} / {1} = {2}", n1, n2, equacao));
+            }
+            else
+            {
+                Console.WriteLine("Opção invalida!");
+            }
+        }
+    }
+}

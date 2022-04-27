@@ -1,0 +1,51 @@
+//  Faça um programa que receba o valor de um produto e o percentual de desconto e mostre
+//  o valor do produto com o desconto e
+//  calcule os impostos (com base no valor sem desconto) sobre e mostre também em tela:
+//  ◦ Valor até 100: alíquota de 5%;
+//  ◦ Valor entre 101 e 300: alíquota de 15%;
+//  ◦ Valor entre 301 e 1000: alíquota de 25%;
+
+using System;
+
+namespace ex005
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double valor, desconto, resdesc, imposto;
+            Console.WriteLine("================================");
+            Console.WriteLine("Digite o valor do Produto: R$ ");
+            valor = Convert.ToSingle(Console.ReadLine());
+            Console.WriteLine("================================");
+            Console.WriteLine("Digite o Desconto: % ");
+            desconto = Convert.ToSingle(Console.ReadLine());
+            resdesc = (valor - ((valor * desconto) / 100));
+            Console.WriteLine("================================");
+            Console.WriteLine("O valor com desconto é R$" + resdesc);
+            Console.WriteLine("-=-=-=-=-= Cálculo do imposto =-=-=-=-");
+            if (valor <= 100)
+            {
+                Console.WriteLine("Aplicando - alíquota de 5%");
+                imposto = 0.05;
+                Console.WriteLine("O imposto a ser pago será: " + (valor * imposto));
+            }
+            else if ((valor >= 101) && (valor <= 300))
+            {
+                Console.WriteLine("Aplicando - alíquota de 15%");
+                imposto = 0.15;
+                Console.WriteLine("O imposto a ser pago será: " + (valor * imposto));
+            }
+            else if ((valor >= 301) && (valor <= 1000))
+            {
+                Console.WriteLine("Aplicando - alíquota de 25%");
+                imposto = 0.25;
+                Console.WriteLine("O imposto a ser pago será: " + (valor * imposto));
+            }
+            else
+            {
+                Console.WriteLine("Sem imposto, Valor acima de R$ 1000,00");
+            }
+        }
+    }
+}

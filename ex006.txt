@@ -1,0 +1,20 @@
+//  Escreva um programa que recebe o primeiro e o último nome de uma pessoa e imprima ambos em tela;
+
+using System;
+
+namespace ex006
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string n1, n2;
+            Console.WriteLine("Digite seu primeiro nome: ");
+            n1 = Console.ReadLine();
+            Console.WriteLine("Digite seu último nome: ");
+            n2 = Console.ReadLine();
+            Console.WriteLine("================================");
+            Console.WriteLine(String.Format("Olá {0} {1}", n1, n2));
+        }
+    }
+}
